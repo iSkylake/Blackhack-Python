@@ -6,9 +6,8 @@ complete_deck = [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 
 another_round = 'yes'
 
 # Player class
-class Player(Plays):
+class Player(object):
     def __init__(self):
-        Plays.__init__(self)
         self.chips = 10
         self.hand = []
 # hit function gets a new card, put Aces at the end of the list
@@ -19,9 +18,8 @@ class Player(Plays):
             self.hand.insert(0, card)
 
 # Dealer class
-class Dealer(Plays):
+class Dealer(object):
     def __init__(self):
-        Plays.__init__(self)
         self.hand = []
 
     def hit(self, card):
